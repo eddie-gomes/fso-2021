@@ -8,6 +8,8 @@ int main()
   int aux = 0, pf = 0, count = 0;
   int belady0[3], belady1[3], disc = 0;
 
+  char fim;
+
   belady0[0] = -1;
 
   scanf("%d", &n);
@@ -24,12 +26,17 @@ int main()
     count = 0;
     aux = 0;
 
-    scanf("%d", &m);
-
-    if (m == EOF)
+    if (scanf("%d", &m) == EOF)
     {
       break;
     }
+
+    // fim = m;
+
+    // if (fim == EOF)
+    // {
+    //   break;
+    // }
 
     q = (int *)malloc(m * sizeof(int));
 
@@ -55,7 +62,7 @@ int main()
         }
       }
     }
-    printf("%d\n", pf);
+    printf("%d %d\n", m, pf);
     // testando a partir daqui ^0 .. ~1
     if (belady0[0] == -1)
     {
